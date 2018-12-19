@@ -14,6 +14,7 @@ import sys
 reload(sys)
 sys.setdefaultencoding('gbk')
 
+# 线程类进行多线程处理对比操作
 
 class BdfTask(threading.Thread):
     def __init__(self, DBF_FILE_NAME, NO_CHECK_PARAM, PRIMARY_KEY):
