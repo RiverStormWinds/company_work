@@ -1,0 +1,13 @@
+{
+	"2":
+        {
+        "CSV_FILE_NAME":
+			{
+				"DICT": "",
+				"BEF": "new1.csv",
+				"AFT": "new3.csv"
+			},
+        "NO_CHECK_PARAM": ["custid", "stkbal"],
+        "PRIMARY_KEY": ["secuid", "stkcode"]
+        }
+}
