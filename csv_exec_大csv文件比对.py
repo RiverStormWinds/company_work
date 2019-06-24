@@ -1,6 +1,8 @@
 # coding=utf-8
 import csv
 import datetime
+
+import chardet
 import pandas as pd
 from collections import OrderedDict
 import threading
@@ -247,7 +249,8 @@ class BdfTask(threading.Thread):
         print('参数初始化已经结束------------------>')
         print()
 
-        df = pd.read_csv(FILE_NAME, low_memory=False)
+        file_encoding = (chardet.detect(open(FILE_NAME, 'rb').read(10000)))['encoding']
+        df = pd.read_csv(FILE_NAME, low_memory=False, encoding=file_encoding)
         print('升级前数据已进入内存----------------->')
         print()
 
@@ -255,7 +258,8 @@ class BdfTask(threading.Thread):
         print('升级前数据已经排序------------------>')
         print()
 
-        df2 = pd.read_csv(FILE_NAME_FAKE, low_memory=False)
+        file_encoding_2 = (chardet.detect(open(FILE_NAME_FAKE, 'rb').read(10000)))['encoding']
+        df2 = pd.read_csv(FILE_NAME_FAKE, low_memory=False, encoding=file_encoding_2)
         print('升级后数据已进入内存------------------>')
         print()
 
