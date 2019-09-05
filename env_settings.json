@@ -1,0 +1,222 @@
+{
+	"back_up_status": "0",
+	"chosen_key": "4",
+	 "1":
+        {
+			"ip": "10.187.160.91",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"2":
+        {
+			"ip": "10.187.160.92",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"3":
+        {
+			"ip": "10.187.160.93",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"4":
+        {
+			"ip": "10.187.160.94",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"5":
+        {
+			"ip": "10.187.160.95",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"6":
+        {
+			"ip": "10.187.160.96",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"7":
+        {
+			"ip": "10.187.160.97",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"8":
+        {
+			"ip": "10.187.160.98",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"9":
+        {
+			"ip": "10.187.160.89",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"10":
+        {
+			"ip": "10.187.160.90",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"11":
+        {
+			"ip": "10.187.160.83",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno",
+				"[run].[dbo].[logasset]": "custid"
+			}
+		},
+	"12":
+        {
+			"ip": "10.187.160.84",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno", 
+				"[run].[dbo].[creditalllogasset]": "custid", 
+				"[run].[dbo].[creditdebts]": "ordersno", 
+				"[run].[dbo].[creditfund]": "fundid", 
+				"[run].[dbo].[logcreditdebts]": "custid", 
+				"[run].[dbo].[logstkremain]": "secuid", 
+				"[run].[dbo].[creditassetdebts]": "custid"
+			}
+		},
+	"13":
+        {
+			"ip": "10.187.160.84",
+			"database": "run",
+			"username": "gjman",
+			"password": "jzjyac@702",
+			"back_up_database": 
+			{
+				"[run].[dbo].[orderrec]": "ordersno", 
+				"[run].[dbo].[fundasset]": "custid", 
+				"[run].[dbo].[stkasset]": "secuid", 
+				"[run].[dbo].[match]": "ordersno", 
+				"[run].[dbo].[matchdetail]": "matchsno", 
+				"[run].[dbo].[creditalllogasset]": "custid", 
+				"[run].[dbo].[creditdebts]": "ordersno", 
+				"[run].[dbo].[creditfund]": "fundid", 
+				"[run].[dbo].[logcreditdebts]": "custid", 
+				"[run].[dbo].[logstkremain]": "secuid", 
+				"[run].[dbo].[creditassetdebts]": "custid"
+			}
+		}
+}
