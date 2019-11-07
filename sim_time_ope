@@ -1,0 +1,2 @@
+# echoBark = 20191105_183609124_I2335f66
+baseTime = int(time.mktime(time.strptime(str(echoBark)[0:15].replace("_", " "), "%Y%m%d %H%M%S"))) * 1000
