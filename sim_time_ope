@@ -1,2 +1,17 @@
 # echoBark = 20191105_183609124_I2335f66
 baseTime = int(time.mktime(time.strptime(str(echoBark)[0:15].replace("_", " "), "%Y%m%d %H%M%S"))) * 1000
+
+def sendemail(text, user, pwd,to_addrs):
+    message = MIMEText(text, 'html', 'utf-8')
+    from_addr = 'a@qq.com'
+    # to_addr = ['a@qq.com', 'a@qq.com', 'a@qq.com', 'a@qq.com']
+    smtp_server = 'smtpscn.qq.com'
+
+    message['From'] = from_addr
+    message['To'] = ";".join(to_addrs)
+    message['Subject'] = Header('something wrong', 'utf-8').encode()
+    server = smtplib.SMTP(smtp_server, 25)
+    server.set_debuglevel(1)
+    server.login(user, pwd)
+    server.sendmail(from_addr, to_addrs, message.as_string())
+
