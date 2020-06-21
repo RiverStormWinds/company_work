@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <h4>{{ totlePrice }}</h4>
+        <h4>{{ fullName }}</h4>
+        <h4></h4>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                books: [
+                    { id: 1, name: '你好编程', price: 200 },
+                    { id: 2, name: '永不放弃', price: 100 },
+                    { id: 3, name: '总有彩虹会浮现', price: 300}
+                    ],
+                firstName: 'Kobe',
+                lastName: 'bryant'
+            },
+            computed: {
+                totlePrice: {
+                    get: function(){
+                        let result = 0
+                        for (let i=0; i<this.books.length; i++){
+                            result += this.books[i].price
+                        }
+                        return result
+                    },
+                },
+                fullName: {
+                    get: function(){
+                        return this.firstName + ' ' + this.lastName
+                    },
+                    set: function(newValue){
+                        const names = newValue.split(' ')
+                        this.firstName = names[0]
+                        this.lastName = names[1]
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

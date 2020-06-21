@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <div class="input-num">
+            <button @click="sub">
+                -
+            </button>
+            <span>{{ num }}</span>
+            <button @click="add">
+                +
+            </button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                num: 1
+            },
+            methods: {
+                add: function(){
+                    // console.log("add");
+                    if(this.num>9){
+                        alert("别点啦！最大啦！")
+                    }else{
+                        this.num++
+                    }
+                },
+                sub: function(){
+                    // console.log("sub");
+                    if(this.num<1){
+                        alert("别点啦！最小啦！")
+                    }else{
+                        this.num-- 
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+</html>

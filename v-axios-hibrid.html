@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="获取笑话" @click="getJoke">
+        <p> {{ joke }} </p>
+        <h2>{{ fullName }}</h2>
+        <h2>{{ getFullName() }}</h2>
+    </div>
+    
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        /*
+            接口：随机返回一条笑话
+            请求地址：https://autumnfish.cn/api/joke
+            请求方法：get
+            请求参数：无
+            相应内容：随机笑话
+        */
+        var app = new Vue({
+            el: "#app",
+            data: {
+                joke: "很好笑的笑话",
+                firstName: 'hello ',
+                lastName: 'world'
+            },
+            computed: {
+                fullName: function(){
+                    return this.firstName + this.lastName
+                }
+            },
+            methods: {
+                getFullName: function(){
+                    return this.firstName + this.lastName
+                },
+                getJoke: function(){
+                    console.log(this.joke)
+                    var that = this  // 将vue对象赋值给that，然后通过that进行前端页面的操作，太牛逼了，2333
+                    axios.get("https://autumnfish.cn/api/joke")  // 在axios中，vue对象操作游标this已经改变，无法再操作vue对象的data了
+                    .then(
+                        function(response){
+                            console.log(response.data)
+                            that.joke = response.data  // 在此进行前端页面的操作
+                        }, function(err){
+                            console.log(err)
+                        }
+                    )
+                }
+            },
+        })
+    </script>
+</body>
+</html>

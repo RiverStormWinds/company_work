@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <p v-if="isShow">哥是一个粉刷匠</p>
+        <p v-show="isShow">哥是v-if的粉刷匠</p>
+        <h2 v-if="temperature>35">热死了</h2>
+        <input type="button" value="切换状态" @click="changeStatus">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+                temperature: 40
+            },
+            methods: {
+                changeStatus: function() {
+                    this.isShow = !this.isShow;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

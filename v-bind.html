@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+    <style>
+        .active{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <img v-bind:src="imgSrc" v-bind:title="imgTitle+'!'" alt="">
+        <img :src="imgSrc" :title="imgTitle" :class="isActive?'active':''" alt="" @click="changeStatus">
+        <img :src="imgSrc" :title="imgTitle" :class="{active: isActive}" alt="" @click="changeStatus">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                imgSrc: "https://img.iplaysoft.com/wp-content/uploads/2019/free-images/free_stock_photo.jpg",
+                imgTitle: "beauty",
+                isActive: false
+            },
+            methods: {
+                changeStatus: function(){
+                    console.log('hehe');
+                    
+                    this.isActive = !this.isActive;
+                }
+            },
+        })
+    </script>
+</body>
+</html>

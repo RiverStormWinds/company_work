@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <cpn @dishello="printHello"></cpn>
+    </div>
+
+    <template id="cpn">
+        <div>
+            <button @click="sendHello">{{value}}</button>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const cpn = {
+            template: "#cpn",
+            data(){
+                return {
+                    value: 'Hello'
+                }
+            },
+            methods: {
+                sendHello(){
+                    this.$emit('dishello', 'hello world')
+                }
+            },
+        }
+        
+        var app = new Vue({
+            el: "#app",
+            components: {
+                cpn: cpn
+            },
+            methods: {
+                printHello(arg){
+                    console.log(arg)
+                }
+            }
+        })
+    </script>
+</body>
+</html>

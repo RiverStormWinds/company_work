@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <cpn v-bind:c-msg="message" :c-books="books"></cpn>
+    </div>
+
+    <template id="cpn">
+        <div>
+            <h3>{{cMsg}}</h3>
+            <ul>
+                <li v-for="(item, index) in cBooks" :key="index">{{ item }}</li>
+            </ul>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        const cpn = {
+            template: "#cpn",
+            props: {
+                cMsg: String,
+                cBooks: Array
+            }
+        }
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: 'hello world',
+                books: ['语文', '数学', '英语', '化学', '物理']
+            },
+            components: {
+                cpn: cpn
+            }
+        })
+    </script>
+</body>
+</html>

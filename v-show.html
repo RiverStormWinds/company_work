@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <img v-show="isShow" src="./src/assets/logo.png" alt=""></img>
+        <img v-show="age>=17" src="./src/assets/logo.png" alt=""></img>
+        <input type="button" value="长大一岁" @click="addAge(100)">
+        <input type="button" value="切换状态" @click="changeIsShow">
+        <input type="text" value="sayHi" @keyup.enter="sayHi('吃了没')">
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                isShow: false,
+                age: 16
+            },
+            methods: {
+                changeIsShow: function(){
+                    this.isShow = !this.isShow;
+                },
+                addAge: function(arg){
+                    this.age++;
+                    console.log(arg);
+                },
+                sayHi: function(arg){
+                    alert('arg')
+                }
+            },
+        })
+    </script>
+</body>
+</html>

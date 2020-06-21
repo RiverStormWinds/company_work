@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+    <style>
+        .active{
+            border: 1px solid red;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="添加数据" @click="add">
+        <input type="button" value="移除数据" @click="pop">
+        <ul>
+            <li v-for="(item, index) in arr">
+                {{ index }}. 挖掘机学校哪家强，中国-->{{ item }}找蓝翔。
+            </li>
+        </ul>
+        <h2 v-for="(item, index) in vegetables" v-bind:title="item.name">{{ item.name }}</h2>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                arr: ['北京', '上海', '广州', '深圳'],
+                vegetables: [
+                    {name: '西兰花炒蛋'},
+                    {name: '蛋炒西兰花'}
+                ]
+            },
+            methods: {
+                add: function(){
+                    this.vegetables.push({name: '花菜炒蛋'})
+                },
+                pop: function(){
+                    this.vegetables.shift(); 
+                }
+            },
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>这是一个HTML5的网页</title>
+</head>
+
+<body>
+    <div id="app">
+        <cpn @itemclick="transFrom"></cpn>
+    </div>
+
+    <template id="cpn">
+        <div>
+            <button v-for="(item, index) in categories" :key="index" 
+                    v-on:click="clkHandle(item)"> {{item.name}} </button>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        // 父组件传递自组件数据
+        const cpn = {
+            template: "#cpn",
+            data(){  // 作为一个子组件的data数据，必须为一个函数，并且返回的是一个对象
+                return {
+                    categories: [
+                        { id: 1, name: '数学' }, 
+                        { id: 2, name: '语文' }, 
+                        { id: 3, name: '英语' },
+                        { id: 4, name: '物理' }, 
+                        { id: 5, name: '化学'}
+                    ]   
+                }
+            },
+            methods: {
+                clkHandle(item){
+                    console.log(item.name);
+                    // 向父组件发送一个自定义事件：itemclick，父组件在子组件使用部位进行接收
+                    this.$emit('itemclick', item)
+                }
+            },
+        }
+
+        var app = new Vue({
+            el: "#app",
+            components: {
+                cpn
+            },
+            methods: {
+                transFrom(item){
+                    console.log('hello world');
+                    console.log(item.name)
+                }
+            }
+        })
+    </script>
+</body>
+</html>
