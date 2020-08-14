@@ -167,3 +167,28 @@ class YAMLLogger(logging.Logger):
         if 'extra' in results and 'level' not in results:
             raise Exception("'level' is mandatory when 'extra' is used")
         self.log_message(logging.INFO, 'results', results, *args, **kwargs)
+
+         
+def setup_logger(options):
+    # Pipeline always log as YAML so change the base logger.
+    # Every calls to logging.getLogger will now return a YAMLLogger
+    logging.setLoggerClass(YAMLLogger)
+
+    # The logger can be used by the parser and the Job object in all phases.
+    logger = logging.getLogger('dispatcher')
+    if options.logging_url is not None:
+        if options.master_cert and options.slave_cert:
+            if not os.path.exists(options.master_cert) or not os.path.exists(options.slave_cert):
+                return None
+        # pylint: disable=no-member
+        logger.addZMQHandler(options.logging_url,
+                             options.master_cert,
+                             options.slave_cert,
+                             options.job_id,
+                             options.ipv6)
+    else:
+        logger.addHandler(logging.StreamHandler())
+
+    return logger
+            
+            
